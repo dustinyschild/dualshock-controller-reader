@@ -42,9 +42,9 @@ controller.on('right:move', data => console.log('right Moved: ' + data.x + ' | '
 
 controller.on('connected', () => console.log('connected'));
 
-controller.on('square:press', ()=> console.log('square press'));
+controller.on('square:press', () => actions.squarePress());
 
-controller.on('square:release', () => console.log('square release'));
+controller.on('square:release', () => actions.squareRelease());
 
 controller.on('circle:press', () => actions.circlePress());
 
