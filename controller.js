@@ -48,6 +48,8 @@ controller.on('square:release', () => console.log('square release'));
 
 controller.on('circle:press', () => actions.circlePress());
 
+controller.on('circle:release', () => actions.circleRelease());
+
 //sixasis motion events:
 //the object returned from each of the movement events is as follows:
 //{

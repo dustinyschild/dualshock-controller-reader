@@ -7,13 +7,12 @@ const pin23 = new Gpio(23,'out');
 
 actions.circlePress = () => {
   console.log('circle button pressed');
-  pin23.write(1);
+  pin23.writeSync(1);
 };
 
 actions.circleRelease = () => {
   console.log('circle button released');
   pin23.write(0);
 };
-
 
 module.exports = actions;
