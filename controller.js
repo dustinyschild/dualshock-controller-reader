@@ -5,7 +5,7 @@ var dualShock = require('dualshock-controller');
 var controller = dualShock(
   {
     //you can use a ds4 by uncommenting this line.
-    config: 'dualshock4-alternate-driver',
+    config: 'dualShock4-alternate-driver',
     //if using ds4 comment this line.
     //config : "dualShock3",
     //smooths the output from the acelerometers (moving averages) defaults to true
