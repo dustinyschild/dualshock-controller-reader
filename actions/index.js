@@ -12,7 +12,7 @@ actions.circlePress = () => {
 
 actions.circleRelease = () => {
   console.log('circle button released');
-  pin23.write(0);
+  pin23.writeSync(0);
 };
 
 module.exports = actions;
