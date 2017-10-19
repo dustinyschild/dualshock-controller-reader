@@ -1,11 +1,11 @@
-
+const actions = require('./actions');
 var dualShock = require('dualshock-controller');
 
 //pass options to init the controller.
 var controller = dualShock(
   {
     //you can use a ds4 by uncommenting this line.
-    config: 'dualshock4-generic-driver',
+    config: 'dualshock4-alternate-driver',
     //if using ds4 comment this line.
     //config : "dualShock3",
     //smooths the output from the acelerometers (moving averages) defaults to true
@@ -45,6 +45,8 @@ controller.on('connected', () => console.log('connected'));
 controller.on('square:press', ()=> console.log('square press'));
 
 controller.on('square:release', () => console.log('square release'));
+
+controller.on('circle:press', () => actions.circlePress());
 
 //sixasis motion events:
 //the object returned from each of the movement events is as follows:
