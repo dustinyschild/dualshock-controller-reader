@@ -11,6 +11,6 @@
   "license": "ISC",
   "dependencies": {
     "dualshock-controller": "^1.1.1",
-    "node-hid": "^0.5.7"
+    "onoff": "^1.1.8"
   }
 }
