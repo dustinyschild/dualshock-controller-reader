@@ -21,6 +21,7 @@ var controller = dualShock(
 controller.on('error',err => console.log(err));
 
 //DualShock 4 control rumble and light settings for the controller
+
 controller.setExtras({
   rumbleLeft:  0,   // 0-255 (Rumble left intensity)
   rumbleRight: 0,   // 0-255 (Rumble right intensity)
@@ -40,18 +41,15 @@ controller.setExtras({
 
 //add event handlers:
 controller.on('left:move', data => console.log('left Moved: ' + data.x + ' | ' + data.y));
-
 controller.on('right:move', data => console.log('right Moved: ' + data.x + ' | ' + data.y));
-
 controller.on('connected', () => console.log('connected'));
+controller.on('square:press', ()=> console.log('square press'));
+controller.on('square:release', () => console.log('square release'));
+controller.on('circle:press', ()=> console.log('cirlce press'));
+controller.on('circle:release', () => console.log('circle release'));
 
-controller.on('square:press', () => actions.squarePress());
-
-controller.on('square:release', () => actions.squareRelease());
-
-controller.on('circle:press', () => actions.circlePress());
-
-controller.on('circle:release', () => actions.circleRelease());
+controller.on('r2:analog', data => console.log('r2 press',data));
+controller.on('l2:analog', data => console.log('l2 press',data));
 
 //sixasis motion events:
 //the object returned from each of the movement events is as follows:
