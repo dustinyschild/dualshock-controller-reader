@@ -1,8 +1,8 @@
-var dualShock = require('dualshock-controller');
-const actions = require('./actions');
 const hid = require('node-hid');
 
 console.log(hid.devices());
+var dualShock = require('dualshock-controller');
+const actions = require('./actions');
 
 //pass options to init the controller.
 var controller = dualShock(
