@@ -1,12 +1,8 @@
 const hid = require('node-hid');
 
 console.log(hid.devices());
->>>>>>> played with more bluetooth packages and got inputs for bluetooth to work
 var dualShock = require('dualshock-controller');
 const actions = require('./actions');
-const hid = require('node-hid');
-
-console.log(hid.devices());
 
 //pass options to init the controller.
 var controller = dualShock(
