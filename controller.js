@@ -1,5 +1,8 @@
-const actions = require('./actions');
 var dualShock = require('dualshock-controller');
+const actions = require('./actions');
+const hid = require('node-hid');
+
+console.log(hid.devices());
 
 //pass options to init the controller.
 var controller = dualShock(
@@ -59,6 +62,7 @@ controller.on('circle:release', () => actions.circleRelease());
 
 //DualShock 4 TouchPad
 //finger 1 is x1 finger 2 is x2
+/*
 controller.on('touchpad:x1:active', () => console.log('touchpad one finger active'));
 
 controller.on('touchpad:x2:active', () => console.log('touchpad two fingers active'));
@@ -68,7 +72,7 @@ controller.on('touchpad:x2:inactive', () => console.log('touchpad back to single
 controller.on('touchpad:x1', data => console.log('touchpad x1:', data.x, data.y));
 
 controller.on('touchpad:x2', data => console.log('touchpad x2:', data.x, data.y));
-
+*/
 
 //right-left movement
 controller.on('rightLeft:motion', data => console.log(data));
